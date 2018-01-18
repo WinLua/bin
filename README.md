@@ -11,7 +11,7 @@ If you just want to try Lua on Windows 10+, download the 32 Bit version of the L
 
 ## Background
 
-There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. I wanted a simple installer that would install and remove Lua so I could hack at it. I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the *think might* work, but... My experience has been similar. 
+There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these hurdles make learning Lua on Windows and knowning what is current very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the *think might* work, but... My experience has been similar. 
 
 ## What is wrong with the current solutions?
 
