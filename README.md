@@ -15,6 +15,15 @@ If you are looking for an excellent Integrated Development Environment (IDE) aki
 
 *The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua as God intended it [1].*
 
+## Okay, I've installed Lua. What Next?
+
+Do yourself a favor and go buy the Programming In Lua book. https://www.lua.org/pil/
+
+The Lua-Users wiki is also a great place to start. http://lua-users.org/wiki/ [2] 
+
+
+There are lots of gems out there that will be added to the wiki in time. 
+
 ## Background
 
 There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these hurdles make learning Lua on Windows and knowning what is current very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the *think might* work, but... My experience has been similar. 
@@ -27,3 +36,4 @@ That said, LuaBinaries is an excellent, current distribution of Lua based on Min
  (to be continued)
  
  [1] In jest, meaning the latest release of Lua from PUC-Rio. http://www.puc-rio.br/index.html
+ [2] I pretty much have this open any time I'm writting Lua: http://lua-users.org/wiki/StringLibraryTutorial
