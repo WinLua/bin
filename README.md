@@ -11,9 +11,9 @@ If you just want to try Lua on Windows 10+, download the 32 Bit version of the L
 
 ## What about auto-complete for Lua and fancy debugging?
 
-If you are looking for an excellent Integrated Development Environment (IDE) akin to Visual Studio for Lua - repleat with tons of samples and tutorials - then please download and support https://studio.zerobrane.com. This project and ZeroBrane are not configured to work togther out of the box, but ZeroBrane is configurable. See https://studio.zerobrane.com/doc-general-preferences (Interpreter Path). Either way, it probably won't make a difference to you. ZeroBrane comes installed with a wide range of "Lua flavours". 
+If you are looking for an excellent Integrated Development Environment (IDE) akin to Visual Studio for Lua - repleat with tons of samples and tutorials - then please download and support https://studio.zerobrane.com. This project and ZeroBrane are not configured to work togther out of the box, but ZeroBrane is configurable. See https://studio.zerobrane.com/doc-general-preferences (Interpreter Path). Either way, it probably won't make a difference to you. ZeroBrane comes installed with a wide range of "Lua flavours" including the currentn version. 
 
-The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua as God intended it [1].
+*The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua as God intended it [1].*
 
 ## Background
 
