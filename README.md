@@ -7,7 +7,7 @@ This project is a collection of resources to help Windows users get started with
 
 If you just want to try Lua on Windows 10+, download the 32 Bit version of the Lua 5.3 installer. This will install the latest Lua, plus a de-facto standard component that allows access to the filesystem. Lua can now be used from the command line (any current cmd or powershell windows will need to be re-opened) or by opening your start menu and typing "Lua" and clicking on the icon. 
 
-**No other components are available at this point. You will have to download and install LuaRocks yourself. Any Rocks that require C/C++ will require either mingw or Visual Studio (Professional?) to be installed on the computer.** *I am working towards fixing this situation.
+**No other components are available at this point. You will have to download and install LuaRocks yourself. Any Rocks that require C/C++ will require either mingw or Visual Studio (Professional?) to be installed on the computer.** *I am working towards fixing this situation.*
 
 ## What about auto-complete for Lua and fancy debugging?
 
