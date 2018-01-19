@@ -7,7 +7,13 @@ This project is a collection of resources to help Windows users get started with
 
 If you just want to try Lua on Windows 10+, download the 32 Bit version of the Lua 5.3 installer. This will install the latest Lua, plus a de-facto standard component that allows access to the filesystem. Lua can now be used from the command line (any current cmd or powershell windows will need to be re-opened) or by opening your start menu and typing "Lua" and clicking on the icon. 
 
-**No other components are available at this point. You will have to download and install LuaRocks yourself. Any Rocks that require C/C++ will require either mingw or Visual Studio (Professional?) to be installed on the computer.** *I am working towards fixing this situation.*
+**No other components are available at this point. You will have to download and install LuaRocks yourself. Any Rocks that require C/C++ will require either mingw or Visual Studio (Professional?) to be installed on the computer.** *I am working towards fixing this situation.
+
+## What about auto-complete for Lua and fancy debugging?
+
+If you are looking for an excellent Integrated Development Environment (IDE) akin to Visual Studio for Lua - repleat with tons of samples and tutorials - then please download and support https://studio.zerobrane.com. This project and ZeroBrane are not configured to work togther out of the box, but ZeroBrane is configurable. See https://studio.zerobrane.com/doc-general-preferences (Interpreter Path). Either way, it probably won't make a difference to you. ZeroBrane comes installed with a wide range of "Lua flavours". 
+
+The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua as God intended it [1].
 
 ## Background
 
@@ -18,6 +24,6 @@ There are many excellent resources for Lua on Windows but some of them are out o
 One of my goals is to outline all the Windows resources and their state of support in the Wiki. I shall elaborate there. 
 
 That said, LuaBinaries is an excellent, current distribution of Lua based on MinGW (Minimum GNU for Windows). It's an excellent distribution but does not provide an installer and to the best of my knowledge requires additional MinGW resources. The binaries do not include a *.lib files that is required to link when using Visual Studio (namely LINK.exe). It's still *not quite* the Windows way...
-
-
-
+ 
+ 
+ [1] I jest, I mean the latest release of Lua from PUC-Rio. http://www.puc-rio.br/index.html
