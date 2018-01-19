@@ -36,4 +36,5 @@ That said, LuaBinaries is an excellent, current distribution of Lua based on Min
  (to be continued)
  
  [1] In jest, meaning the latest release of Lua from PUC-Rio. http://www.puc-rio.br/index.html
+ 
  [2] I pretty much have this open any time I'm writting Lua: http://lua-users.org/wiki/StringLibraryTutorial
