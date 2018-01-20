@@ -1,11 +1,9 @@
 # bin
 Binaries and Installers for public consumption.
 
-This project is a collection of resources to help Windows users get started with Lua. The imputis has been my own frustration finding a straight line in using Lua with Windows 10.
-
 ## Getting Started
 
-If you just want to try Lua on Windows 10+, download the 32 Bit version of the Lua 5.3 installer. This will install the latest Lua, plus a de-facto standard component that allows access to the filesystem. Lua can now be used from the command line (any current cmd or powershell windows will need to be re-opened) or by opening your start menu and typing "Lua" and clicking on the icon. 
+If you just want to try Lua on Windows 10+, download the 32 Bit version of the Lua 5.3 installer[1]. This will install the latest Lua, plus a de-facto standard component that allows access to the filesystem. Lua can now be used from the command line (any current cmd or powershell windows will need to be re-opened) or by opening your start menu and typing "Lua" and clicking on the icon. 
 
 **No other components are available at this point. You will have to download and install LuaRocks yourself. Any Rocks that require C/C++ will require either mingw or Visual Studio (Professional?) to be installed on the computer.** *We am working towards fixing this situation.*
 
@@ -13,7 +11,7 @@ If you just want to try Lua on Windows 10+, download the 32 Bit version of the L
 
 If you are looking for an excellent Integrated Development Environment (IDE) akin to Visual Studio for Lua - repleat with tons of samples and tutorials - then please download and support https://studio.zerobrane.com. This project and ZeroBrane are not configured to work togther out of the box, but ZeroBrane is configurable. See https://studio.zerobrane.com/doc-general-preferences (Interpreter Path). Either way, it probably won't make a difference to you. ZeroBrane comes installed with a wide range of "Lua flavours" including the currentn version. 
 
-*The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua as God intended it [1].*
+*The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua.*
 
 ## Okay, I've installed Lua. What Next?
 
@@ -35,6 +33,5 @@ One of my goals is to outline all the Windows resources and their state of suppo
 That said, LuaBinaries is an excellent, current distribution of Lua based on MinGW (Minimum GNU for Windows). It's an excellent distribution but does not provide an installer and to the best of my knowledge requires additional MinGW resources. The binaries do not include a *.lib files that is required to link when using Visual Studio (namely LINK.exe). It's still *not quite* the Windows way...
  (to be continued)
  
- [1] In jest, meaning the latest release of Lua from PUC-Rio. http://www.puc-rio.br/index.html
- 
+ [1] If you don't know why you would want 64 bits then you don't need them. The 32 bit version is in no way inferior for your purposes and simplifies things when Lua starts getting complicated. Big numbers are there for Mathematicians, not us. 
  [2] I pretty much have this open any time I'm writting Lua: http://lua-users.org/wiki/StringLibraryTutorial
