@@ -30,7 +30,7 @@ There are many excellent resources for Lua on Windows but some of them are out o
 
 One of my goals is to outline all the Windows resources and their state of support in the Wiki. I shall elaborate there. 
 
-That said, LuaBinaries is an excellent, current distribution of Lua based on MinGW (Minimum GNU for Windows). It's an excellent distribution but does not provide an installer and to the best of my knowledge requires additional MinGW resources. The binaries do not include a *.lib files that is required to link when using Visual Studio (namely LINK.exe). It's still *not quite* the Windows way...
+That said, LuaBinaries is an excellent, current distribution of Lua built with GCC (GNU C Compiler) on MinGW (Minimum GNU for Windows). It's an excellent distribution but does not provide an installer and to the best of my knowledge requires additional MinGW resources. The binaries do not include a *.lib files that is required to link when using Visual Studio (namely LINK.exe). It's still *not quite* the Windows way...
  (to be continued)
  
  [1] If you don't know why you would want 64 bits then you don't need them. The 32 bit version is in no way inferior for your purposes and simplifies things when Lua starts getting complicated. Big numbers are there for Mathematicians, not us. 
