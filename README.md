@@ -1,5 +1,5 @@
 # bin
-Binaries and Installers for public consumption.
+Binaries and Installers for public consumption. Please see [Wiki Home](wiki) for release notes.
 
 ## Getting Started
 
