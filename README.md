@@ -1,5 +1,5 @@
 # bin
-Binaries and Installers for public consumption. Please see [Wiki Home](wiki) for release notes.
+Binaries and Installers for public consumption. Please see [Wiki Home](https://github.com/WinLua/bin/wiki) for release notes.
 
 ## Getting Started
 
