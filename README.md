@@ -1,5 +1,5 @@
 # bin
-Binaries and Installers for public consumption.
+Binaries and Installers for public consumption. Please see [Wiki Home](https://github.com/WinLua/bin/wiki) for release notes.
 
 ## Getting Started
 
@@ -24,14 +24,19 @@ There are lots of gems out there that will be added to the wiki in time.
 
 ## Background
 
-There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these hurdles make learning Lua on Windows and knowning what is current very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the *think might* work, but... My experience has been similar. 
+There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these and other reasons make learning Lua on Windows and knowning what is current very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the that works. My experience has been similar. 
 
-## What is wrong with the current solutions?
+## Other Binary Solutions
 
-One of my goals is to outline all the Windows resources and their state of support in the Wiki. I shall elaborate there. 
+One of my goals is to outline all the Windows resources I can and their state of support in the Wiki. I shall elaborate there. 
 
-That said, [LuaBinaries](https://sourceforge.net/projects/luabinaries/) is an excellent, current distribution of Lua built with GCC (GNU C Compiler) on MinGW (Minimum GNU for Windows) [3]. It's an excellent distribution but does not provide an installer and to the best of my knowledge requires additional MinGW resources. The binaries do not include a *.lib files that is required to link when using Visual Studio (namely LINK.exe). It's still *not quite* the Windows way...
- (to be continued)
+That said, [LuaBinaries](https://sourceforge.net/projects/luabinaries/) is an excellent, current distribution of Lua built with GCC (GNU C Compiler) on MinGW (Minimum GNU for Windows) [3]. It's an excellent distribution if you already know the ins and outs of Lua and you'd like to include the executables with your application and know how to manipulate the windows PATH variable. LuaBinaries is also available through the [Choclatey package manager](https://chocolatey.org). 
+
+WinLua by contrast is "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line or dynamically included from a standardized location. WinLua is not on choclatey but could be on the roadmap for Release 2.
+
+## How can I help
+
+Contribute. Documentation is a big part of the battle. If you have a Lua project please drop an issue and say hi.
  
  [1] If you don't know why you would want 64 bits then you don't need them. The 32 bit version is in no way inferior for your purposes and simplifies things when Lua starts getting complicated. Big numbers are there for Mathematicians, not us.
  
