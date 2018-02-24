@@ -32,7 +32,7 @@ There are many excellent resources for Lua on Windows but some of them are out o
 [LuaBinaries](https://sourceforge.net/projects/luabinaries/) is an excellent, current distribution of Lua built with GCC (GNU C Compiler) on MinGW (Minimum GNU for Windows) [3]. It's an excellent distribution if you already know the ins and outs of Lua and you'd like to include the executables with your application and know how to manipulate the windows PATH variable. LuaBinaries is also available through the [Choclatey package manager](https://chocolatey.org). 
 
 ### JoeDF
-JoeDf has [Lots of goodies built with MinGW](http://joedf.ahkscript.org/LuaBuilds/). His site explains how to use the binaries. it's an unzip installation and there is no path manipulation.
+JoeDf has [Lots of goodies built with MinGW](http://joedf.ahkscript.org/LuaBuilds/); his site explains how to use them. Binaries are packages as zips and there is no path manipulation.
 
 ## WinLua By Contrast
 
