@@ -24,7 +24,7 @@ There are lots of gems out there that will be added to the wiki in time.
 
 ## Background
 
-There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these realities and more makes learning Lua on Windows very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the that works. My experience has been similar. 
+There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these realities makes learning Lua on Windows very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that the that works. My experience has been similar. 
 
 ## Other Binary Solutions
 
