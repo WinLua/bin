@@ -30,7 +30,7 @@ There are many excellent resources for Lua on Windows but some of them are out o
 
 [LuaBinaries](https://sourceforge.net/projects/luabinaries/) is an excellent, current distribution of Lua built with GCC (GNU C Compiler) on MinGW (Minimum GNU for Windows) [3]. It's an excellent distribution if you already know the ins and outs of Lua and you'd like to include the executables with your application and know how to manipulate the windows PATH variable. LuaBinaries is also available through the [Choclatey package manager](https://chocolatey.org). 
 
-WinLua by contrast is built with Visual Studio 2017 against Window 10. The binaries are "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line. The luaxx.dll can be dynamically included in applications from a standardized location. If using C++, [Sol2 can be used with a single include](https://github.com/WinLua/bin/wiki/Release-1#sol2). WinLua is available also as a Merge Module for inclusion in installers (i.e. WIX) but is not availale on choclatey yet.
+WinLua by contrast is built with Visual Studio 2017 against Window 10. The binaries are "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line. The luaxx.dll can be dynamically included in applications from a standardized location. If using C++, [Sol2 can be used with a single include](https://github.com/WinLua/bin/wiki/Release-1#sol2). WinLua is also available as a Merge Module for inclusion in third party installers (e.g. your installer built with [ISWix](https://github.com/iswix-llc/iswix-tutorials) ) but is not yet availale on choclatey.
 
 ## How can I help
 
