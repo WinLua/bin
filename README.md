@@ -1,5 +1,5 @@
 # bin
-Binaries and Installers for public consumption. Please see [Wiki Home](https://github.com/WinLua/bin/wiki) for release notes.
+Binaries and Installers for public consumption. Please see [Wiki Home](https://github.com/WinLua/bin/wiki) for release notes. If you wandered in here looking for an OpenSSL binary, check the LibreSSL directory for a 32 bit msi (or download WinLua!). 
 
 ## Getting Started
 
