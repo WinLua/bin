@@ -33,7 +33,7 @@ https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-d
 
 ## Using LuaRocks from Powershell
 
-Luarocks requires a compiler to build and install rocks but Powershell isn't configured to work with the compilers by default. To fix this, I've included a powershell version of vsvar.bat called vsvars.ps1. If you are willining and able to run `Set-ExecutionPolicy Unrestricted` you can include the vsvars.ps1 file in your "...\Documents\WindowsPowerShell" folder and add the following line to your Microsoft.PowerShell_profile.ps1 file (Where the year is the version of Visual Studio or VC build tools):
+Luarocks is a command line tool and requires a compiler to build and install "rocks". Powershell isn't configured to work with the compilers by default. To fix this, I've included a powershell version of vsvar.bat called vsvars.ps1. If you are willining and able to run `Set-ExecutionPolicy Unrestricted` you can include the vsvars.ps1 file in your "...\Documents\WindowsPowerShell" folder and add the following line to your Microsoft.PowerShell_profile.ps1 file (Where the year is the version of Visual Studio or VC build tools):
 
 ```powershell
 
@@ -64,7 +64,7 @@ JoeDf has [lots of goodies built with MinGW](http://joedf.ahkscript.org/LuaBuild
 
 ## WinLua By Contrast
 
-WinLua by contrast is built with Visual Studio 2017 against Window 10. WinLua only officially supports Windows 10, but can be used if you download the VC Redtistributable[2]. The binaries are "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line. The luaxx.dll can be dynamically included in applications from a standardized location. If using C++, [Sol2 can be used with a single include](https://github.com/WinLua/bin/wiki/Release-1#sol2). WinLua Release 1 is also available as a Merge Module for inclusion in third party installers (e.g. your installer built with [ISWix](https://github.com/iswix-llc/iswix-tutorials) ) but is not yet availale on choclatey. I hope to have a bootstrapper soon to allow for MSVC re-distribution.
+WinLua by contrast is built with Visual Studio 2017. WinLua only officially supports Windows 10, but can be used on Windows 7 or 8 if you download the VC Redtistributable[2]. The binaries are "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line. The luaxx.dll can be dynamically included in applications from a standardized location. If using C++, [Sol2 can be used with a single include](https://github.com/WinLua/bin/wiki/Release-1#sol2). WinLua Release 1 is also available as a Merge Module for inclusion in third party installers (e.g. your installer built with [ISWix](https://github.com/iswix-llc/iswix-tutorials) ) but is not yet availale on choclatey. I hope to have a bootstrapper soon to allow for MSVC re-distribution.
 
 
  [1] If you don't know why you would want 64 bits then you don't need them. The 32 bit version is in no way inferior for your purposes and simplifies things when Lua starts getting complicated. Big numbers are there for Mathematicians, not us.
