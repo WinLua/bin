@@ -2,31 +2,54 @@
 Binaries and Installers for public consumption. Please see [Wiki Home](https://github.com/WinLua/bin/wiki) for release notes. If you wandered in here looking for an OpenSSL binary, check the LibreSSL directory for a 32 bit msi (or download WinLua!). 
 
 ## Getting Started
+If you just want to try Lua on Windows 10+, download the Release 1 version of the Lua 5.3 installer. The new *Alpha* Release 3 file is a more complete installer with Luarocks, LibreSSL and a Lua based build system for C called JamPlus. Both Releases will install Lua, plus a de-facto filesystem component and a C++ interface called Sol(2/3). Release 1 provides 32 and 64 bit, Release 3 is currently 32 bit only.[1]. After installation Lua can be used from the command line (any current cmd or powershell windows will need to be re-opened) or by opening your start menu and typing "Lua" and clicking on the icon. If you want to use LuaRocks, you'll need a compiler, which is discussed below. 
 
-If you just want to try Lua on Windows 10+, download the Release 1 32 Bit version of the Lua 5.3 installer[1]. If your looking for Lua 5.4, please check out the Release 2 directory, which is currently an experimental release. Both MSIs will install Lua, plus a de-facto standard component that allows access to the filesystem, among other things. After installation Lua can be used from the command line (any current cmd or powershell windows will need to be re-opened) or by opening your start menu and typing "Lua" and clicking on the icon. 
+## Debugging Lua - Release 3 OP_HALT Patch
+The Release 3 Lua binaries contain a patch file that allows for more performant debugging by adding a non-standard Lua op-code. This patch can be used in conjunction with the DevCat Debugger for Visual Studio Code.
 
-**No other Lua modules are available at this point. You will have to download and install LuaRocks yourself. Any Rocks that require C/C++ will require either mingw or Visual Studio (Professional?) to be installed on the computer.** *Solutions to this problem are a work in progress.*
+The original op_halt patch was authored by Dan Tull. This version is made available by DevCat here: 
+https://github.com/devcat-studio/lua-5.3.4-op_halt
 
-## What about auto-complete for Lua and fancy debugging?
+The DevCat debugger is made available here:
+https://marketplace.visualstudio.com/items?itemName=devCAT.lua-debug
 
-If you are looking for an excellent Integrated Development Environment (IDE) akin to Visual Studio for Lua - repleat with tons of samples and tutorials - then please download and support https://studio.zerobrane.com. This project and ZeroBrane are not configured to work togther out of the box, but ZeroBrane is configurable. See https://studio.zerobrane.com/doc-general-preferences (Interpreter Path). Either way, it probably won't make a difference to you. ZeroBrane comes installed with a wide range of "Lua flavours" including the current Lua version. 
+## Compiler
+I currently use the Microsoct VC compilers. They are included with Visual Studio (including the FREE community edition), but VS is a 20 GB download. If you are looking for a more practical toolchain (~4 GB), you can download the FREE VC++ compiler toolchain. The microsoft download is here: 
+https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
 
-*The WinLua project is not a replacement for ZeroBrane. WinLua is about bog-standard Lua.*
+There is an excellent windows package manager calle Chocolatey. The build tools are available through the choco interface:
 
-## Okay, I've installed Lua. What Next?
+`choco install visualstudio2019buildtool`
+
+https://chocolatey.org/packages/visualstudio2019buildtools
+
+The VC redistributable is here:
+https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
+
+## Using LuaRocks from Powershell
+
+Luarocks requires a compiler to build and install rocks but Powershell isn't configured to work with the compilers by default. To fix this, I've included a powershell version of vsvar.bat called vsvars.ps1. If you are willining and able to run `Set-ExecutionPolicy Unrestricted` you can include the vsvars.ps1 file in your "...\Documents\WindowsPowerShell" folder and add the following line to your Microsoft.PowerShell_profile.ps1 file (Where the year is the version of Visual Studio or VC build tools):
+
+```powershell
+
+write-host 'Load VsVars...'
+. $PSScriptRoot/vsVars.ps1 2019
+```
+
+Next time you run powershell you can check for a compiler by typing `cl`
+
+## Lua Resources?
 
 Do yourself a favor and go buy the Programming In Lua book. https://www.lua.org/pil/
 
 The Lua-Users wiki is also a great place to start. http://lua-users.org/wiki/ [2] 
 
-
-There are lots of gems out there that will be added to the wiki in time. 
-
-## Background
-
-There are many excellent resources for Lua on Windows but some of them are out of date, and others are too complex for the average user. The combination of these realities makes learning Lua on Windows very difficult. *I wanted a simple installer that would install and remove Lua so I could hack at it.* I've tried to introduce some of my friends to Lua that are *very* technical but are not software developers. It took them months of poking around until they found something that works. My experience has been similar. 
-
 ## Other Binary Solutions
+
+### ZeroBrane Studio
+I love ZeroBrane. If you are looking for an excellent Integrated Development Environment (IDE) akin to Visual Studio for Lua - repleat with tons of samples and tutorials - then please download and support https://studio.zerobrane.com. If you're new to Lua, I recommend it. This project and ZeroBrane are not configured to work togther (though ZeroBrane is configurable) but it doesn't matter. ZeroBrane comes with a wide range of "Lua flavours" including the current Lua version. I highly recommend ZeroBrane.
+
+*The WinLua project is not a replacement for ZeroBrane. ZeroBrane is a far more complete Lua solution for beginners.*
 
 ### LuaBinaries
 [LuaBinaries](https://sourceforge.net/projects/luabinaries/) is an excellent, current distribution of Lua built with GCC (GNU C Compiler) on MinGW (Minimum GNU for Windows) [3]. It's an excellent distribution if you already know the ins and outs of Lua and you'd like to include the executables with your application and know how to manipulate the windows PATH variable. LuaBinaries is also available through the [Choclatey package manager](https://chocolatey.org). 
@@ -36,14 +59,12 @@ JoeDf has [lots of goodies built with MinGW](http://joedf.ahkscript.org/LuaBuild
 
 ## WinLua By Contrast
 
-WinLua by contrast is built with Visual Studio 2017 against Window 10. The binaries are "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line. The luaxx.dll can be dynamically included in applications from a standardized location. If using C++, [Sol2 can be used with a single include](https://github.com/WinLua/bin/wiki/Release-1#sol2). WinLua is also available as a Merge Module for inclusion in third party installers (e.g. your installer built with [ISWix](https://github.com/iswix-llc/iswix-tutorials) ) but is not yet availale on choclatey. I hope to have a bootstrapper soon to allow for MSVC re-distribution.
+WinLua by contrast is built with Visual Studio 2017 against Window 10. WinLua only officially supports Windows 10, but can be used if you download the VC Redtistributable[2]. The binaries are "integrated with Windows" via installers and so Lua can be added and removed like other applications and used from the command line. The luaxx.dll can be dynamically included in applications from a standardized location. If using C++, [Sol2 can be used with a single include](https://github.com/WinLua/bin/wiki/Release-1#sol2). WinLua Release 1 is also available as a Merge Module for inclusion in third party installers (e.g. your installer built with [ISWix](https://github.com/iswix-llc/iswix-tutorials) ) but is not yet availale on choclatey. I hope to have a bootstrapper soon to allow for MSVC re-distribution.
 
 ## How can I help
 
-Contribute. Documentation is a big part of the battle. If you have a Lua project please drop an issue and say hi.
- 
  [1] If you don't know why you would want 64 bits then you don't need them. The 32 bit version is in no way inferior for your purposes and simplifies things when Lua starts getting complicated. Big numbers are there for Mathematicians, not us.
  
- [2] I pretty much have this open any time I'm writting Lua: http://lua-users.org/wiki/StringLibraryTutorial
+ [2] https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
  
  [3] To learn more about GNU environment on Windows, see MSYS2 and the excellent MSYS2 installer in choclatey.
