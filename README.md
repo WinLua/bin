@@ -24,7 +24,7 @@ https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Buil
 
 There is an excellent windows package manager calle Chocolatey. The build tools are available through the choco interface:
 
-`choco install visualstudio2019buildtool`
+`choco install visualstudio2019buildtools`
 
 https://chocolatey.org/packages/visualstudio2019buildtools
 
