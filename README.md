@@ -1,6 +1,8 @@
 # bin
 Binaries and Installers for public consumption. Please see [Wiki Home](https://github.com/WinLua/bin/wiki) for release notes. If you wandered in here looking for an OpenSSL binary, check the LibreSSL directory for a 32 bit msi (or download WinLua!). 
 
+NOTE: The new WinLua R3 with Winlua Compiler Toolchain is too big to host in this repository. I will switch to using releases soon. Until then the alpha installer can be found here: https://1drv.ms/u/s!AhdX-12NH-BT2Hroykjz7_VAik4f?e=9og4Zs
+
 ## Getting Started
 If you just want to try Lua on Windows 10+, download the Release 1 version of the Lua 5.3 installer. The new *Alpha* Release 3 file is a more complete installer with the Luarocks package manager, LibreSSL and a Lua based build system for C called JamPlus. 
 
